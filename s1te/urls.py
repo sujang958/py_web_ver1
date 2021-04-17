@@ -22,11 +22,18 @@ from django.conf import settings
 import blog.views as blogViews
 
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', IndexView.as_view()),
+
     path('bookmark/', BookmarkLV.as_view()),
     path('bookmark/<pk>', BookmarkDV.as_view()),
+
     path('about/', AboutView.as_view()),
     path('blog/', blogViews.BlogLV.as_view(), name='blog'),
+
+    path('accounts/register/', UserCreateView.as_view(), name="register"),
+    path('accounts/register/done/', UserCreateDoneTV.as_view(), name="register_done")
+
 ] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
