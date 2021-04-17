@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <style>
+        body {
+            margin-top: 25vh;
+        }
+    </style>
+</head>
+<body class="text-center bg-dark text-white">
+    <p class="h1">bookmark</p><br><br><br>
+    <div class="content">
+        <p class="h2">Name: {{object.title}} </p><br><br>
+        <span class="lead">
+            <a href="{{ object.url }}" class="btn btn-primary link" target="_blank">{{ object.url }}</a>
+        </span>
+    </div>
+</body>
+</html>
