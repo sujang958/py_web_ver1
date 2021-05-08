@@ -101,13 +101,24 @@ body {
             <a class="nav-link" href="/bookmark">Bookmark</a>
             <a class="nav-link" href="/blog">Blog</a>
             <a class="nav-link" href="/about">About</a>
+            {% if user.is_active %}
+              <p class="lead">{{ user.get_username }}</p>
+            {% else %}
+              <a href="/accounts/login" class="nav-link">Sign in</a>
+              <a href="/accounts/register" class="nav-link">Sign up</a>
+            {% endif %}
           </nav>
         </div>
       </header>
     
       <main class="px-3">
-        <h1>Lorem.</h1>
-        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas vitae, architecto repudiandae laudantium inventore quo doloremque laborum alias deleniti perferendis, nemo fugiat accusamus sit beatae quos ipsam odit quia quod dolorem dicta officiis eos. Totam.</p>
+        <h1>asdf</h1>
+        <p class="lead">ioadfn;vmpamgpakpawemgm
+          googleapismbao[
+          mb[anonymous]mgo
+          align-items]asmg
+          a]
+        </p>
       </main>
     
       <footer class="mt-auto text-white-50">
