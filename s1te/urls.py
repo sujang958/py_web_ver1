@@ -22,12 +22,14 @@ from django.conf import settings
 import blog.views as blogViews
 
 
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', IndexView.as_view()),
 
-    path('bookmark/', BookmarkLV.as_view()),
+    path('bookmark/', BookmarkLV.as_view(), name="bookmark_index"),
+    path('bookmark/create', BookmarkCV.as_view(), name="bookmark_create"),
+    path('bookmark/update/<pk>', BookmarkUV.as_view(), name="bookmark_update"),
+    path('bookmark/delete/<pk>', BookmarkRV.as_view(), name="bookmark_delete"),
     path('bookmark/<pk>', BookmarkDV.as_view()),
 
     path('about/', AboutView.as_view()),
