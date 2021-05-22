@@ -2,7 +2,7 @@ from django.db import models
 
 class Post(models.Model):
     title = models.CharField(blank=False, null=False, max_length=50)
-    image = models.ImageField(blank=True)
+    image = models.ImageField(blank=False)
     description = models.CharField(blank=False, null=False, max_length=350, help_text="Description!")
 
     def __str__(self):

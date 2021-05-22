@@ -8,21 +8,19 @@
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <style>
         body {
-            margin-top: 25vh;
+            margin-top: 35vh;
         }
     </style>
 </head>
 <body class="text-center bg-dark text-white">
-    <p class="h1">bookmark</p>
-    <a href="/bookmark/update/{{ object.id }}" class="btn btn-primary btn-sm">
-        <i class="fa fa-repeat"></i>&nbsp; Update
-    </a>
-    <a href="/bookmark/delete/{{ object.id }}" class="btn btn-danger btn-sm">
-        <i class="fa fa-trash"></i>&nbsp; Delete
-    </a>
-    <br><br><br>
     <div class="content">
-        <p class="h2">Name: {{object.title}} </p><br>
+        <p class="h1">{{object.title}}</p><br>
+        <a href="/bookmark/update/{{ object.id }}" class="btn btn-primary btn-sm">
+            <i class="fa fa-repeat"></i>&nbsp; Update
+        </a>
+        <a href="/bookmark/delete/{{ object.id }}" class="btn btn-danger btn-sm">
+            <i class="fa fa-trash"></i>&nbsp; Delete
+        </a><br><br>
         <a href="{{ object.url }}" class="btn btn-primary lead" target="_blank">{{ object.url }}</a>
     </div>
 </body>

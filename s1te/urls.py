@@ -19,8 +19,7 @@ from s1te.views import *
 from bookmark.views import *
 from django.conf.urls.static import static
 from django.conf import settings
-import blog.views as blogViews
-
+from blog.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -33,7 +32,11 @@ urlpatterns = [
     path('bookmark/<pk>', BookmarkDV.as_view()),
 
     path('about/', AboutView.as_view()),
-    path('blog/', blogViews.BlogLV.as_view(), name='blog'),
+
+    path('blog/', BlogLV.as_view(), name='blog'),
+    path('blog/create', blogCV.as_view(), name='blog_create'),
+    path('blog/update/<pk>', blogUV.as_view()),
+    path('blog/delete/<pk>', blogRV.as_view()),
 
     path('accounts/register/', UserCreateView.as_view(), name="register"),
     path('accounts/register/done/', UserCreateDoneTV.as_view(), name="register_done"),
